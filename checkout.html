@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Secure Checkout at BookNook. Enter shipping address, choose delivery, gift wrapping, and simulated payment.">
+  <meta name="author" content="Dharla SaiBabu (SaiBabu Dharla) - Data Alpha Systems">
+  <title>Checkout | BookNook</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <aside class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span><i class="fa-solid fa-lock"></i> 256-Bit SSL Encrypted Checkout</span>
+      </div>
+      <div class="top-bar-right">
+        <span><i class="fa-solid fa-phone"></i> Order Assistance: +91 800-BOOK-NOOK</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Global Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo" aria-label="BookNook Home">
+          <div class="brand-icon">
+            <i class="fa-solid fa-book-open-reader"></i>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">BOOKNOOK</span>
+            <span class="brand-tagline">Books &amp; Stationery</span>
+          </div>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Main Navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="products.html" class="nav-link">Books</a>
+          <a href="cart.html" class="nav-link">Cart</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="cart.html" class="btn btn-secondary btn-sm">
+            <i class="fa-solid fa-arrow-left"></i> Return to Cart
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Checkout Content -->
+  <main class="section" id="checkout-main-section">
+    <div class="container">
+      
+      <div style="margin-bottom: 2rem;">
+        <span class="section-tag">Step 2 of 2</span>
+        <h1>Secure Order Checkout</h1>
+        <p style="color: var(--color-muted);">Please provide your delivery destination and select a simulated payment gateway.</p>
+      </div>
+
+      <div class="checkout-layout">
+        
+        <!-- Left: Form Steps -->
+        <form id="checkout-form" class="checkout-form-card">
+          
+          <!-- Step 1: Customer Contact & Shipping Address -->
+          <section class="checkout-step">
+            <h3 class="step-title">
+              <span class="step-num">1</span>
+              <span>Shipping &amp; Recipient Information</span>
+            </h3>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="checkout-name">Recipient Full Name *</label>
+                <input type="text" id="checkout-name" class="form-control" placeholder="e.g. Dharla SaiBabu" required>
+              </div>
+
+              <div class="form-group">
+                <label for="checkout-phone">Mobile Phone (for delivery SMS) *</label>
+                <input type="tel" id="checkout-phone" class="form-control" placeholder="+91 98765 43210" required>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="checkout-email">Email Address (for order receipt) *</label>
+                <input type="email" id="checkout-email" class="form-control" placeholder="reader@example.com" required>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="checkout-street">Street Address, House/Flat No, Landmark *</label>
+                <input type="text" id="checkout-street" class="form-control" placeholder="Flat 402, Oakwood Manor, Main Road" required>
+              </div>
+
+              <div class="form-group">
+                <label for="checkout-city">City / Town *</label>
+                <input type="text" id="checkout-city" class="form-control" placeholder="Hyderabad" required>
+              </div>
+
+              <div class="form-group">
+                <label for="checkout-state">State / Province *</label>
+                <input type="text" id="checkout-state" class="form-control" placeholder="Telangana" required>
+              </div>
+
+              <div class="form-group">
+                <label for="checkout-zip">Postal PIN Code *</label>
+                <input type="text" id="checkout-zip" class="form-control" placeholder="500081" required>
+              </div>
+
+              <div class="form-group">
+                <label for="checkout-country">Country</label>
+                <input type="text" id="checkout-country" class="form-control" value="India" readonly>
+              </div>
+            </div>
+
+            <!-- Gift Wrapping Option -->
+            <label class="gift-wrap-card">
+              <input type="checkbox" id="gift-wrap-checkbox" style="width:20px; height:20px; accent-color:var(--color-primary);">
+              <div>
+                <strong style="color:var(--color-charcoal); display:flex; align-items:center; gap:0.4rem;">
+                  <i class="fa-solid fa-gift text-forest"></i> Add Signature Literary Gift Wrapping (+₹50)
+                </strong>
+                <p style="font-size:0.82rem; color:var(--color-muted); margin-top:0.2rem;">
+                  Includes antique kraft wrapping paper, emerald satin ribbon, wax stamped seal, and an embossed personalized bookmark.
+                </p>
+              </div>
+            </label>
+          </section>
+
+          <!-- Step 2: Payment Simulation -->
+          <section class="checkout-step">
+            <h3 class="step-title">
+              <span class="step-num">2</span>
+              <span>Payment Mode (Simulated Gateway)</span>
+            </h3>
+
+            <div class="radio-cards-group" style="margin-bottom: 1.5rem;">
+              <label class="radio-card">
+                <input type="radio" name="paymentMethod" value="card" checked>
+                <div>
+                  <strong><i class="fa-solid fa-credit-card text-forest"></i> Credit / Debit Card</strong>
+                  <p style="font-size: 0.8rem; color: var(--color-muted);">Visa, MasterCard, RuPay</p>
+                </div>
+              </label>
+
+              <label class="radio-card">
+                <input type="radio" name="paymentMethod" value="upi">
+                <div>
+                  <strong><i class="fa-solid fa-mobile-screen-button text-forest"></i> Instant UPI / QR</strong>
+                  <p style="font-size: 0.8rem; color: var(--color-muted);">GPay, PhonePe, Paytm</p>
+                </div>
+              </label>
+
+              <label class="radio-card">
+                <input type="radio" name="paymentMethod" value="cod">
+                <div>
+                  <strong><i class="fa-solid fa-money-bill-wave text-forest"></i> Cash on Delivery</strong>
+                  <p style="font-size: 0.8rem; color: var(--color-muted);">Pay cash upon receipt</p>
+                </div>
+              </label>
+            </div>
+
+            <!-- Card simulation fields -->
+            <div id="payment-box-card" class="payment-fields-box" style="background: var(--color-cream); padding: 1.25rem; border-radius: var(--radius-md);">
+              <div class="form-grid">
+                <div class="form-group full-width">
+                  <label for="card-number">Card Number</label>
+                  <input type="text" id="card-number" class="form-control" placeholder="4532 •••• •••• 8892" value="4532 8901 2345 6789">
+                </div>
+                <div class="form-group">
+                  <label for="card-expiry">Expiry Date</label>
+                  <input type="text" id="card-expiry" class="form-control" placeholder="MM/YY" value="12/28">
+                </div>
+                <div class="form-group">
+                  <label for="card-cvv">CVV</label>
+                  <input type="password" id="card-cvv" class="form-control" placeholder="123" value="456" maxlength="4">
+                </div>
+              </div>
+            </div>
+
+            <!-- UPI simulation fields -->
+            <div id="payment-box-upi" class="payment-fields-box" style="display:none; background: var(--color-cream); padding: 1.25rem; border-radius: var(--radius-md);">
+              <div class="form-group">
+                <label for="upi-id">Virtual Payment Address (VPA / UPI ID)</label>
+                <input type="text" id="upi-id" class="form-control" placeholder="username@okhdfcbank" value="reader@upi">
+              </div>
+              <p style="font-size:0.8rem; color:var(--color-muted); margin-top:0.4rem;">
+                <i class="fa-solid fa-info-circle"></i> A simulated payment authorization push will be approved instantly.
+              </p>
+            </div>
+
+            <!-- COD simulation fields -->
+            <div id="payment-box-cod" class="payment-fields-box" style="display:none; background: var(--color-cream); padding: 1.25rem; border-radius: var(--radius-md);">
+              <p style="font-size:0.88rem; color:var(--color-charcoal);">
+                <i class="fa-solid fa-hand-holding-dollar text-forest"></i> Please keep exact change ready upon delivery. No additional COD handling surcharge applied.
+              </p>
+            </div>
+          </section>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary btn-block btn-lg" style="font-size: 1.1rem; padding: 1rem;">
+            <i class="fa-solid fa-bag-shopping"></i> Complete &amp; Place Order
+          </button>
+        </form>
+
+        <!-- Right: Order Summary Sidebar -->
+        <aside class="cart-summary-card">
+          <h3 class="summary-heading">Items In Your Order</h3>
+
+          <div id="checkout-items-list" style="max-height: 280px; overflow-y: auto; margin-bottom: 1.25rem; padding-right: 0.3rem;">
+            <!-- Rendered by checkout.js -->
+          </div>
+
+          <div class="summary-row">
+            <span style="color: var(--color-muted);">Items Subtotal:</span>
+            <span id="checkout-subtotal" style="font-weight: 600;">₹0</span>
+          </div>
+
+          <div class="summary-row" id="checkout-giftwrap-row" style="display: none; color: var(--color-primary);">
+            <span>Artisan Gift Wrapping:</span>
+            <span id="checkout-giftwrap-val" style="font-weight: 600;">+₹50</span>
+          </div>
+
+          <div class="summary-row">
+            <span style="color: var(--color-muted);">Delivery Fee:</span>
+            <span id="checkout-shipping" style="font-weight: 600;">FREE</span>
+          </div>
+
+          <div class="summary-total-row">
+            <span>Total Payable:</span>
+            <span id="checkout-grand-total">₹0</span>
+          </div>
+
+          <div style="margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--color-border); font-size: 0.82rem; color: var(--color-muted); line-height: 1.5;">
+            <p><i class="fa-solid fa-shield-check text-forest"></i> Protected by simulated SSL gateway.</p>
+            <p><i class="fa-solid fa-box-open text-forest"></i> Eco-friendly recyclable cardboard packing.</p>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 <strong>BookNook Books &amp; Stationery</strong>. Engineered with pride by <strong>Dharla SaiBabu</strong> for Data Alpha Systems.</p>
+        <div class="footer-badges">
+          <span><i class="fa-solid fa-shield-heart"></i> 100% Secure Shopping</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign in to your BookNook account. Access orders, saved wishlist, and addresses.">
+  <meta name="author" content="Dharla SaiBabu (SaiBabu Dharla) - Data Alpha Systems">
+  <title>Login | BookNook</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Global Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo" aria-label="BookNook Home">
+          <div class="brand-icon">
+            <i class="fa-solid fa-book-open-reader"></i>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">BOOKNOOK</span>
+            <span class="brand-tagline">Books &amp; Stationery</span>
+          </div>
+        </a>
+
+        <nav class="desktop-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="products.html" class="nav-link">Books</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="register.html" class="btn btn-outline btn-sm">Create Account</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Login Form Wrapper -->
+  <main class="auth-wrapper">
+    <div class="auth-card">
+      <div class="auth-header">
+        <div class="brand-icon" style="margin: 0 auto 1rem; width: 48px; height: 48px; font-size: 1.4rem;">
+          <i class="fa-solid fa-feather-pointed"></i>
+        </div>
+        <h2>Welcome Back, Reader</h2>
+        <p class="text-muted">Sign in to view your orders, saved titles, and reading habits.</p>
+      </div>
+
+      <!-- Quick Demo Credentials Box -->
+      <div class="demo-credentials-box">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.25rem;">
+          <strong><i class="fa-solid fa-key"></i> Quick Demo Login</strong>
+          <button type="button" id="fill-demo-credentials" class="btn btn-sm btn-secondary" style="padding:0.2rem 0.6rem; font-size:0.75rem;">
+            Auto Fill
+          </button>
+        </div>
+        <p>Email: <code>saibabu@dataalpha.com</code></p>
+        <p>Password: <code>BookNook2026!</code></p>
+      </div>
+
+      <form id="login-form">
+        <div class="form-group" style="margin-bottom: 1.25rem;">
+          <label for="login-email">Email Address</label>
+          <input type="email" id="login-email" class="form-control" placeholder="reader@domain.com" required>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <label for="login-password">Password</label>
+            <a href="contact.html" style="font-size: 0.8rem; color: var(--color-primary);">Forgot Password?</a>
+          </div>
+          <input type="password" id="login-password" class="form-control" placeholder="••••••••" required>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; font-size: 0.88rem;">
+          <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+            <input type="checkbox" id="remember-me" checked style="accent-color: var(--color-primary);">
+            Remember my session
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-bottom: 1.25rem;">
+          <i class="fa-solid fa-arrow-right-to-bracket"></i> Sign In to Account
+        </button>
+
+        <div style="text-align: center; font-size: 0.9rem; color: var(--color-muted);">
+          New to BookNook? <a href="register.html" style="color: var(--color-primary); font-weight: 700;">Create an Account</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 <strong>BookNook Books &amp; Stationery</strong>. Engineered with pride by <strong>Dharla SaiBabu</strong> for Data Alpha Systems.</p>
+        <div class="footer-badges">
+          <span><i class="fa-solid fa-shield-heart"></i> Simulated Auth System</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
+

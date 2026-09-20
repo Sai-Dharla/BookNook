@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BookNook - Curated Books & Artisan Stationery. Explore fiction, non-fiction, children's books, journals, pens, and literary gifts.">
+  <meta name="author" content="Dharla SaiBabu (SaiBabu Dharla) - Data Alpha Systems">
+  <title>BookNook | Explore Categories</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span><i class="fa-solid fa-feather-pointed"></i> Free Bookmarks & Delivery across India on orders above ₹499</span>
+      </div>
+      <div class="top-bar-right">
+        <span><i class="fa-solid fa-phone"></i> +91 800-BOOK-NOOK</span>
+        <a href="about.html">Our Heritage</a>
+        <a href="contact.html">Store Locator</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Global Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <!-- Brand Logo -->
+        <a href="index.html" class="brand-logo" aria-label="BookNook Home">
+          <div class="brand-icon">
+            <i class="fa-solid fa-book-open-reader"></i>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">BOOKNOOK</span>
+            <span class="brand-tagline">Books & Stationery</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="desktop-nav" aria-label="Main Navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="products.html" class="nav-link">Books</a>
+          <a href="categories.html" class="nav-link active">Categories</a>
+          <a href="stationery.html" class="nav-link">Stationery</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- Search Bar -->
+        <div class="header-search">
+          <form class="search-form" action="products.html" method="GET">
+            <input type="text" name="search" class="search-input" placeholder="Search books, authors, ISBN..." aria-label="Search catalog">
+            <button type="submit" class="search-btn" aria-label="Submit Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+
+        <!-- Header Action Icons -->
+        <div class="header-actions">
+          <!-- Wishlist Button -->
+          <a href="account.html#wishlist" class="action-btn" title="View Wishlist" aria-label="Wishlist">
+            <i class="fa-regular fa-heart"></i>
+            <span class="badge-count wishlist-badge-count" style="display:none;">0</span>
+          </a>
+
+          <!-- Cart Button -->
+          <a href="cart.html" class="action-btn" title="Shopping Cart" aria-label="Shopping Cart">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="badge-count cart-badge cart-badge-count" style="display:none;">0</span>
+          </a>
+
+          <!-- User Account / Login Button -->
+          <a href="login.html" id="header-user-btn" class="user-profile-btn" aria-label="Account">
+            <i class="fa-regular fa-user"></i>
+            <span class="d-none-sm">Login</span>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button type="button" class="mobile-nav-toggle" aria-label="Open mobile navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer & Overlay -->
+  <div class="drawer-overlay"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Menu">
+    <div class="drawer-header">
+      <div class="brand-logo">
+        <div class="brand-icon" style="width:36px; height:36px; font-size:1.1rem;">
+          <i class="fa-solid fa-book-open-reader"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title" style="font-size:1.3rem;">BOOKNOOK</span>
+        </div>
+      </div>
+      <button type="button" class="drawer-close-btn" aria-label="Close mobile menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="drawer-search">
+      <form class="drawer-search-form" action="products.html" method="GET">
+        <div class="search-form">
+          <input type="text" name="search" class="search-input" placeholder="Search catalog...">
+          <button type="submit" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+      </form>
+    </div>
+
+    <ul class="drawer-nav-list">
+      <li class="drawer-nav-item"><a href="index.html" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li class="drawer-nav-item"><a href="products.html"><i class="fa-solid fa-book"></i> All Books</a></li>
+      <li class="drawer-nav-item"><a href="fiction.html"><i class="fa-solid fa-shapes"></i> Fiction</a></li>
+      <li class="drawer-nav-item"><a href="non-fiction.html"><i class="fa-solid fa-compass"></i> Non-Fiction</a></li>
+      <li class="drawer-nav-item"><a href="children.html"><i class="fa-solid fa-child"></i> Children's Books</a></li>
+      <li class="drawer-nav-item"><a href="stationery.html"><i class="fa-solid fa-pen-nib"></i> Stationery</a></li>
+      <li class="drawer-nav-item"><a href="account.html#wishlist"><i class="fa-solid fa-heart"></i> My Wishlist</a></li>
+      <li class="drawer-nav-item"><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i> Shopping Cart</a></li>
+      <li class="drawer-nav-item"><a href="account.html"><i class="fa-solid fa-user"></i> My Account</a></li>
+      <li class="drawer-nav-item"><a href="about.html"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
+      <li class="drawer-nav-item"><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact Us</a></li>
+    </ul>
+
+    <div class="drawer-footer">
+      <p>Data Alpha Systems Internship Project</p>
+      <p>Developed by <strong>Dharla SaiBabu</strong></p>
+    </div>
+  </aside>
+
+  
+  <main>
+    <section class="section" style="background-color: var(--color-cream-light);">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Library Aisles</span>
+          <h2>Explore Our Collections</h2>
+          <p>Navigate through our carefully curated sections of literature, knowledge, and craft.</p>
+        </header>
+
+        <div class="category-showcase-grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem;">
+          
+          <a href="fiction.html" class="category-card">
+            <div class="category-card-icon"><i class="fa-solid fa-masks-theater"></i></div>
+            <h3>Fiction</h3>
+            <p>Literary Fiction, Mystery & Thriller, Science Fiction, Fantasy, Romance</p>
+            <span class="category-link-text">Browse Fiction <i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+
+          <a href="non-fiction.html" class="category-card">
+            <div class="category-card-icon"><i class="fa-solid fa-brain"></i></div>
+            <h3>Non-Fiction</h3>
+            <p>Biography, Self-Help, History, Science, Business & Finance</p>
+            <span class="category-link-text">Browse Non-Fiction <i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+
+          <a href="children.html" class="category-card">
+            <div class="category-card-icon"><i class="fa-solid fa-shapes"></i></div>
+            <h3>Children's Books</h3>
+            <p>Picture Books, Story Books, Educational, Activity Books, Board Books</p>
+            <span class="category-link-text">Browse Children's <i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+
+          <a href="stationery.html" class="category-card">
+            <div class="category-card-icon"><i class="fa-solid fa-pen-nib"></i></div>
+            <h3>Stationery</h3>
+            <p>Notebooks & Journals, Pens & Pencils, Art Supplies, Desk Accessories</p>
+            <span class="category-link-text">Browse Stationery <i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+          
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="brand-icon">
+              <i class="fa-solid fa-book-open-reader"></i>
+            </div>
+            <div class="brand-text">
+              <span class="brand-title">BOOKNOOK</span>
+              <span class="brand-tagline">Books &amp; Stationery</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            A sanctuary dedicated to readers, thinkers, and writers. Preserving literary culture with tactile books and heritage stationery.
+          </p>
+          <div class="internship-badge">
+            <p>Developed for <strong>Data Alpha Systems</strong></p>
+            <p>Web Development Internship by <strong>Dharla SaiBabu</strong> (SaiBabu Dharla)</p>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Explore Catalog</h4>
+          <ul class="footer-links">
+            <li><a href="fiction.html"><i class="fa-solid fa-angle-right"></i> Fiction Literature</a></li>
+            <li><a href="non-fiction.html"><i class="fa-solid fa-angle-right"></i> Non-Fiction &amp; Biographies</a></li>
+            <li><a href="children.html"><i class="fa-solid fa-angle-right"></i> Children's Books</a></li>
+            <li><a href="stationery.html"><i class="fa-solid fa-angle-right"></i> Handcrafted Stationery</a></li>
+            <li><a href="products.html?sort=bestseller"><i class="fa-solid fa-angle-right"></i> Top Bestsellers</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="account.html"><i class="fa-solid fa-angle-right"></i> My Account &amp; Orders</a></li>
+            <li><a href="account.html#wishlist"><i class="fa-solid fa-angle-right"></i> Saved Wishlist</a></li>
+            <li><a href="cart.html"><i class="fa-solid fa-angle-right"></i> View Cart &amp; Checkout</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> Our Story &amp; Values</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> Help Center &amp; FAQs</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Bookstore Address</h4>
+          <ul class="footer-contact">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>BookNook Pavilion, 42 Knowledge Avenue, Cyber Valley, Hyderabad, India - 500081</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <span>+91 800-BOOK-NOOK / (040) 2345-6789</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <span>concierge@booknookstore.com</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-clock"></i>
+              <span>Mon – Sun: 09:30 AM – 09:30 PM IST</span>
+            </li>
+          </ul>
+
+          <div class="footer-socials">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 <strong>BookNook Books &amp; Stationery</strong>. Engineered with pride by <strong>Dharla SaiBabu</strong> for Data Alpha Systems.</p>
+        <div class="footer-badges">
+          <span><i class="fa-solid fa-shield-heart"></i> 100% Secure Shopping</span>
+          <span><i class="fa-solid fa-truck-fast"></i> Pan-India Dispatch</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  
+</body>
+</html>
+
